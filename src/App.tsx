@@ -23,17 +23,17 @@ const App = () => {
     },)
 
     return (
-        <div>
-            <div className="weather">
-                <input id="in" className="form-control form-control-lg mt-1" type="text" onChange={e => setCity(e.target.value)} placeholder="Enter your city here" aria-label=".form-control-lg example" />
+        <div className='flex flex-col justify-center items-center gap-20'>
+            <div>
+                <input id="in" className=" p-2 border mt-1 rounded-xl text-center" type="text" onChange={e => setCity(e.target.value)} placeholder="Enter your city here" />
                 <div className="text-center">
-                    <button type="button" onClick={() => getData()} className="btn btn-outline-primary mt-3 text-center">Get weather</button>
+                    <button type="button" onClick={() => getData()} className="mt-3 text-center border bg-yellow-600">Get weather</button>
                 </div>
             </div>
-            <div className="cen">
-                <h1 className='mx-2 flex font-monospace text-xl '>{name}</h1>
-                <h1 className='mx-2 flex font-monospace text-xl' >  {temp}°C</h1>
-                <h1 className='mx-2 flex font-monospace text-xl'>{desc}</h1>
+            <div className=' bg-slate-900 p-4 rounded-2xl'>
+                <h1 className='font-mono text-xl'>{name}</h1>
+                <h1 className='font-mono text-xl'>  {temp}°C</h1>
+                <h1 className='font-mono text-xl'>{desc}</h1>
             </div>
         </div>
     )
