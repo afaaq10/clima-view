@@ -36,7 +36,7 @@ const App: React.FC = () => {
                 <div className='mt-9'>Loading...</div>
             ) : (
                 <div className="h-1">
-                    {weatherData && <WeatherCard data={weatherData} />} {/* Display WeatherCard if weatherData exists */}
+                    {weatherData && <WeatherCard data={weatherData} />}
                 </div>
             )}
         </div>
