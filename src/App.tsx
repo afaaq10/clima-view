@@ -1,12 +1,12 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React from 'react';
 import axios from 'axios';
 import WeatherCard from './components/WeatherCard'; // Import the WeatherCard component
 
 const App: React.FC = () => {
-    const inputRef = useRef<HTMLInputElement>(null);
-    const [weatherData, setWeatherData] = useState(null);
-    const [city, setCity] = useState('baramulla');
-    const [isLoading, setIsLoading] = useState(false);
+    const inputRef = React.useRef<HTMLInputElement>(null);
+    const [weatherData, setWeatherData] = React.useState(null);
+    const [city, setCity] = React.useState('baramulla');
+    const [isLoading, setIsLoading] = React.useState(false);
 
     const getData = () => {
         if (!city) alert("Please enter a valid city name");
@@ -19,11 +19,10 @@ const App: React.FC = () => {
             .finally(() => setIsLoading(false));
     }
 
-    useEffect(() => {
+    React.useEffect(() => {
         inputRef.current?.focus();
     }, []);
 
-    console.log(weatherData);
     return (
         <div className='flex flex-col justify-center items-center py-28'>
             <div className="">

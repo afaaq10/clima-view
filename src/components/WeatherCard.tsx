@@ -13,10 +13,10 @@ interface WeatherDataProps {
 }
 const WeatherCard: React.FC<WeatherDataProps> = ({ data }) => {
     return (
-        <div className="max-w-md mx-auto rounded-xl overflow-hidden shadow-lg bg-white">
-            <div className="px-6 py-4">
+        <div className="max-w-md mx-auto rounded-xl overflow-hidden shadow-lg bg-white mt-8">
+            <div className="px-6 mb-8">
                 <div className="font-bold text-xl mb-2">{data.name}, {data.sys.country}</div>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-2 gap-8">
                     <div>
                         <p className="text-gray-700">Temperature</p>
                         <p className="text-gray-900 font-semibold">{data.main.temp}°C</p>
