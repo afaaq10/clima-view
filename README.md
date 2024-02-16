@@ -1,30 +1,46 @@
-# React + TypeScript + Vite
+![image](https://github.com/afaaq10/clima-view/assets/87464681/cadb77ed-7b7c-4ac4-a354-8e725a290d63)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# Weather App
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A simple React application to check the weather of a specific city using the OpenWeatherMap API.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Allows users to enter a city name and retrieve its current weather information.
+- Displays weather information such as temperature, description, and city name.
+- Shows a loading indicator while fetching weather data.
+- Alerts users when the entered city is not found or when an error occurs during data retrieval.
 
-- Configure the top-level `parserOptions` property like this:
+## Technologies Used
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- React
+- Typescript
+- Axios
+- OpenWeatherMap API
+- Tailwind CSS (for styling)
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Installation
+
+### Prerequisites
+
+- Node.js
+- npm
+
+### Steps
+
+1. Clone the repository:
+   git clone <repository_url>
+
+2. Navigate to the project directory:
+   cd app-name
+
+3. Install dependencies:
+   npm install
+
+Obtain an API key from OpenWeatherMap and replace YOUR_API_KEY in App.tsx with your API key.
+
+4. Start the development server:
+
+   npm start
+   Open your browser and visit http://localhost:3000 to view the application.
